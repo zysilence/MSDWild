@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Speech Ehancement with Nerual Homomorphic Synthesis</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Speech Ehancement with Nerual Homomorphic Synthesis <small class="color_fade">Online Samples</small>
+            </h1>
+        </header>
+
+        <h4> Authors:</h4>
+        <div style="font-size: medium;"> Wenbin Jiang, Zhijun Liu, Kai Yu, Fei Wen </div>
+        <h4> Abstract:</h4>
+        <div style="font-size: medium;"> Most deep learning-based speech enhancement methods operate directly on time-frequency representations or
+            learned features without making use of the model of speech production. This work proposes a new speech
+            enhancement method based on neural homomorphic synthesis. The speech signal is firstly decomposed into
+            excitation and vocal track with complex cepstrum analysis. Then, two complex-valued neural networks are
+            applied to estimate the target complex spectrum of the decomposed components. Finally, the time-domain
+            speech signal is synthesized from the estimated excitation and vocal track. Furthermore, we investigated
+            numerous loss functions and found that the multi-resolution STFT loss, commonly used in the TTS vocoder,
+            benefits speech enhancement. Experimental results demonstrate that the proposed method outperforms existing
+            state-of-the-art complex-valued neural network-based methods in terms of both PESQ and eSTOI.</div>
+
+
+        <hr class="hr_line">
+        <h3>Seen Noise</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Model\Noise</th>
+                    <th>OMEETING</th>
+                    <th>DKITCHEN</th>
+                    <th>OMEETING</th>
+                    <th>PCAFETER</th>
+                    <th>TBUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <td> Clean </td>
+                    <td><audio controls=""><source src="samples/Clean/555.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Clean/157.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Clean/520.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Clean/1015.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Clean/1514.wav"></audio></td>
+                    </tr>
+                    <tr> <td> Noisy </td>
+                    <td><audio controls=""><source src="samples/Noisy/555.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Noisy/157.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Noisy/520.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Noisy/1015.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Noisy/1514.wav"></audio></td>
+                    </tr>
+                    <tr> <td> DCCRN-SI-SNR </td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/555.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/157.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/520.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/1015.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/1514.wav"></audio></td>
+                    </tr>
+                    <tr> <td> DCCRN-wSDR </td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/555.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/157.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/520.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/1015.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/1514.wav"></audio></td>
+                    </tr>
+                    <tr> <td> DCCRN-MR-STFT </td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/555.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/157.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/520.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/1015.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/1514.wav"></audio></td>
+                    </tr>
+                    <tr> <td> NHS-SE </td>
+                    <td><audio controls=""><source src="samples/NHS-SE/555.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/NHS-SE/157.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/NHS-SE/520.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/NHS-SE/1015.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/NHS-SE/1514.wav"></audio></td>
+                    </tr>
+            </tbody>
+        </table>
+        <h4>Spectrogram of the samples in first column </h4>
+        <img src="img/555.png" class="container">
+        
+        <hr class="hr_line">
+        <h3>Unseen Noise</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Model\Noise</th>
+                    <th>NFIELD</th>
+                    <th>NPARK</th>
+                    <th>NRIVER</th>
+                    <th>SCAFE</th>
+                    <th>SPSQUARE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <td> Clean </td>
+                    <td><audio controls=""><source src="samples/Clean/2081.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Clean/2588.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Clean/3004.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Clean/3564.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Clean/4368.wav"></audio></td>
+                    </tr>
+                    <tr> <td> Noisy </td>
+                    <td><audio controls=""><source src="samples/Noisy/2081.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Noisy/2588.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Noisy/3004.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Noisy/3564.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/Noisy/4368.wav"></audio></td>
+                    </tr>
+                    <tr> <td> DCCRN-SI-SNR </td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/2081.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/2588.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/3004.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/3564.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-SI-SNR/4368.wav"></audio></td>
+                    </tr>
+                    <tr> <td> DCCRN-wSDR </td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/2081.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/2588.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/3004.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/3564.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-wSDR/4368.wav"></audio></td>
+                    </tr>
+                    <tr> <td> DCCRN-MR-STFT </td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/2081.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/2588.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/3004.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/3564.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/DCCRN-MR-STFT/4368.wav"></audio></td>
+                    </tr>
+                    <tr> <td> NHS-SE </td>
+                    <td><audio controls=""><source src="samples/NHS-SE/2081.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/NHS-SE/2588.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/NHS-SE/3004.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/NHS-SE/3564.wav"></audio></td>
+                    <td><audio controls=""><source src="samples/NHS-SE/4368.wav"></audio></td>
+                    </tr>
+            </tbody>
+        </table>
+        <h4>Spectrogram of the samples in first column </h4>
+        <img src="img/2081.png" class="container">
+        <!-- <hr class="hr_line"> -->
+        <div class="row"> &nbsp; </div> <br/>
+
+
+    </div>
+</body>
