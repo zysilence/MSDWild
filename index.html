@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Speech Enhancement with Neural Homomorphic Synthesis</title>
+    <title>MSDWILD: MULTI-MODAL SPEAKER DIARIZATION DATASET IN THE WILD</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/user.css">
 </head>
@@ -11,22 +11,33 @@
 <body>
     <div class="container">
         <header>
-            <h1>Speech Enhancement with Neural Homomorphic Synthesis <small class="color_fade">Online Samples</small>
+            <h1>MSDWILD: MULTI-MODAL SPEAKER DIARIZATION DATASET IN THE WILD <small class="color_fade">Online Samples</small>
             </h1>
         </header>
 
         <h4> Authors:</h4>
-        <div style="font-size: medium;"> Wenbin Jiang, Zhijun Liu, Kai Yu, Fei Wen </div>
+        <div style="font-size: medium;"> Tao Liu, Shuai Fan, Xu Xiang, Hongbo Song, Shaoxiong Lin, Jiaqi Sun, Tianyuan Han, Siyuan Chen, Binwei Yao, Sen Liu, Yifei, Wu, Yanmin Qian, Kai Yu </div>
         <h4> Abstract:</h4>
-        <div style="font-size: medium;"> Most deep learning-based speech enhancement methods operate directly on time-frequency representations or
-            learned features without making use of the model of speech production. This work proposes a new speech
-            enhancement method based on neural homomorphic synthesis. The speech signal is firstly decomposed into
-            excitation and vocal track with complex cepstrum analysis. Then, two complex-valued neural networks are
-            applied to estimate the target complex spectrum of the decomposed components. Finally, the time-domain
-            speech signal is synthesized from the estimated excitation and vocal track. Furthermore, we investigated
-            numerous loss functions and found that the multi-resolution STFT loss, commonly used in the TTS vocoder,
-            benefits speech enhancement. Experimental results demonstrate that the proposed method outperforms existing
-            state-of-the-art complex-valued neural network-based methods in terms of both PESQ and eSTOI.</div>
+        <div style="font-size: medium;"> Speaker diarization in real-world acoustic environments is a
+            challenging task of increasing interest from both academia and
+            industry. Although it has been widely accepted that incorporat-
+            ing visual information benefits audio processing tasks such as
+            speech recognition, there is currently no fully released dataset
+            that can be used for benchmarking multi-modal speaker diariza-
+            tion performance in real-world environments. In this paper,
+            we release MSDWild∗, a benchmark dataset for multi-modal
+            speaker diarization in the wild. The dataset is collected from
+            found public videos, covering rich real-world scenarios and
+            languages. All video clips are naturally shot videos without
+            over-editing such as lens switching. Audio and video are both
+            released. In particular, MSDWild has a large portion of the
+            naturally overlapped speech, forming an excellent testbed for
+            cocktail-party problem research. Audio-only, visual-only, and
+            audio-visual speaker diarization experiments are conducted on
+            the dataset. Compared with the audio-only or visual-only ap-
+            proach, the audio-visual approach gets improvement both in the
+            few-talker and the many-talker condition, but still has improve-
+            ment room for multi-modal speaker diarization </div>
 
 
         <hr class="hr_line">
